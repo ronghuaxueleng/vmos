@@ -8,6 +8,12 @@ chmod 644 workdir/system/build.prop
 cp -rf configs/wpa_supplicant.conf workdir/system/etc/wifi/
 cp -rf configs/wlanName workdir/data/netinfo/
 
+rm -rf workdir/system/priv-app/Xposed
+rm -rf workdir/data/data/de.robv.android.xposed.installer
+rm -rf workdir/system/xposed.prop
+rm -rf workdir/system/framework/XposedBridge.jar
+rm -rf workdir/system/app/superuser
+
 for file in $(ls ca/* | grep -v tmp.pem)
 do
   echo $file
