@@ -7,8 +7,10 @@ do
   then
       openssl x509 -in $file -out ca/tmp.pem
       caName=`openssl x509 -subject_hash_old -in ca/tmp.pem -noout`
+      rm -rf ca/tmp.pem
   else
       caName=`openssl x509 -subject_hash_old -in $file -noout`
   fi
   echo $caName
+  cp $file buildCa/$caName.0
 done
