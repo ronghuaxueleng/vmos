@@ -1,8 +1,8 @@
 #!/bin/bash
 
 mkdir workdir
-unzip original.zip -d workdir
-cp -rf configs/build.prop workdir/system/
+unzip original5.1.zip -d workdir
+cp -rf configs/build5.1.prop workdir/system/build.prop
 chmod 644 workdir/system/build.prop
 
 cp -rf configs/wpa_supplicant.conf workdir/system/etc/wifi/
@@ -32,6 +32,6 @@ do
 done
 
 cd workdir
-zip -r 安卓7.1纯净版64位.zip *
-mv 安卓7.1纯净版64位.zip ../
+zip -r 安卓5.1纯净版64位.zip *
+mv 安卓5.1纯净版64位.zip ../
 cd .. && rm -rf workdir
