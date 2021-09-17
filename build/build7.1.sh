@@ -13,7 +13,7 @@ rm -rf workdir/data/data/de.robv.android.xposed.installer
 rm -rf workdir/system/xposed.prop
 rm -rf workdir/system/framework/XposedBridge.jar
 rm -rf workdir/system/app/superuser
-rm -rf workdir/system/app/via
+# rm -rf workdir/system/app/via
 
 cp -rf app workdir/system/
 
@@ -36,5 +36,5 @@ done
 
 cd workdir
 zip -9rq 安卓7.1纯净版64位.zip *
-mv 安卓7.1纯净版64位.zip ../rom/
+mv 安卓7.1纯净版64位.zip ../
 cd .. && rm -rf workdir
